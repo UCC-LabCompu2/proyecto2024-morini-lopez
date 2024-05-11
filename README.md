@@ -17,7 +17,7 @@ rutinas y ejercicios que podes hacer
 ## Autores:
 | Apellido y nombre | Clave |
 |-------------------|-------|
-| Lopez, Franco     |       |
+| Lopez, Franco     | 2306164 |
 | Morini, Germán    | 2302130 |
 
 
