@@ -216,7 +216,6 @@ form textarea {
 }
 
 /* Mensaje */ 
-<style>
     body {
         background-image: url('https://etenonfitness.com/wp-content/uploads/2021/12/gimnasio-1024x768.jpeg'); 
         background-size: cover;
@@ -242,5 +241,3 @@ form textarea {
         color: #666;
         font-size: 18px;
     }
-</style>
-
