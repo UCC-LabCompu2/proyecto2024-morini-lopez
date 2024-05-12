@@ -215,29 +215,26 @@ form textarea {
     box-sizing: border-box;
 }
 
-/* Mensaje */ 
-    body {
-        background-image: url('https://etenonfitness.com/wp-content/uploads/2021/12/gimnasio-1024x768.jpeg'); 
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh; 
-    }
 
-    .box {
-        background-color: rgba(255, 255, 255, 0.8); 
-        padding: 40px;
-        border-radius: 10px;
-        text-align: center;
-    }
 
-    h1 {
-        color: #000;
-    }
+/* Mensaje.html */
 
-    p {
-        color: #666;
-        font-size: 18px;
-    }
+.box {
+    background-image: url('imagenes/fondo_gimnasio.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.box p {
+    color: #b0b0b0;
+    font-size: 1.2em;
+}

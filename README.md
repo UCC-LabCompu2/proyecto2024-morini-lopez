@@ -1,6 +1,6 @@
-# "LA ROCA" gymnasio
+# "LA ROCA" gimnasio
 
-Página web de un gymnasio ficticio
+Página web de un gimnasio ficticio
 
 Te muestra una presentacion del mismo, de los servicios que ofrece, incluso te muestra
 rutinas y ejercicios que podes hacer. También incluye un formulario para suscribirte
@@ -8,15 +8,16 @@ rutinas y ejercicios que podes hacer. También incluye un formulario para suscri
 ## Índice
 
 - [Home](https://ucc-labcompu2.github.io/proyecto2024-morini-lopez/)
-- link 1
-- link 2
+- [Entrenamiento](https://ucc-labcompu2.github.io/proyecto2024-morini-lopez/entrenamientos.html)
+- [Entrenamiento | piernas](https://ucc-labcompu2.github.io/proyecto2024-morini-lopez/pierna.html)
+- [Mas información](https://ucc-labcompu2.github.io/proyecto2024-morini-lopez/mas_info.html)
 
 ## Tecnologías usadas
 
 - **HTML5**
 - **CSS3**
 
-## Autores
+### Autores
 
 | Apellido y nombre | Clave |
 |-------------------|-------|
