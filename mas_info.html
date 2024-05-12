@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mas información | La roca GYM</title>
+    <meta name="author" content="Lopez, Franco; Morini, Germán">
+    <meta name="description" content="El mejor gymnasio de Córdoba">
+    <meta name="keywords" content="Córdoba, salud, ejercicio, bienestar">
+    <link rel="shortcut icon" type="image/x-icon" href="imagenes/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <a href="index.html"><img id="logo" src="imagenes/header/logo.jpg" alt="La Roca LOGO"></a>
+    <nav>
+        <a href="planes.html">Planes</a>
+        <a href="entrenamientos.html">Entrenamiento</a>
+        <a href="mas_info.html">Más Info</a>
+    </nav>
+    <div class="redes-sociales">
+        <a href="https://www.whatsapp.com/"><img src="imagenes/header/what.png" alt="WhatsApp"></a>
+        <a href="https://www.facebook.com/"><img src="imagenes/header/facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/"><img src="imagenes/header/insta.png" alt="Instagram"></a>
+    </div>
+</header>
+<main>
+    <h1 class="leyenda1">Complete el formulario para más información</h1>
+    <form action="procesar_formulario.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" maxlength="30" placeholder="Tu nombre">
+
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni" maxlength="9" placeholder="Tu documento">
+
+        <label for="edad">Edad:</label>
+        <input type="text" maxlength="3" id="edad" name="edad" maxlength="3" placeholder="Tu edad">
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" maxlength="30" placeholder="Algún teléfono">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" maxlength="30" placeholder="Tu correo electrónico">
+
+        <label for="preferencias">Preferencias de Entrenamiento:</label>
+        <textarea id="preferencias" name="preferencias" rows="4" maxlength="200" placeholder="¿Que te gustaría hacer? o ¿Que te gustaría saber?"></textarea>
+
+        <input type="submit" value="Enviar">
+    </form>
+</main>
+
+</body>
+</html>

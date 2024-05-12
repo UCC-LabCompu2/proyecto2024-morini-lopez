@@ -2,53 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>La roca GYM</title>
+    <title>Home | La roca GYM</title>
     <meta name="author" content="Lopez, Franco; Morini, Germán">
     <meta name="description" content="El mejor gymnasio de Córdoba">
     <meta name="keywords" content="Córdoba, salud, ejercicio, bienestar">
-    <link rel="shortcut icon" type="image/x-icon" href="resources/favicon.png">
-    <style>
-        #logo{
-            width: 360px;
-        }
-
-        .presentacion{
-            width: 1000px;
-            height: 600px;
-        }
-
-        .cuerpo{
-            text-align: center;
-            margin: 30px;
-        }
-    </style>
+    <link rel="shortcut icon" type="image/x-icon" href="imagenes/favicon.png">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="cuerpo">
-    <header>
-        <img id="logo" src="resources/logo.jpg" alt="LA ROCA logo">
-    </header>
-    <main>
-        <h2>TU VIAJE COMIENZA AHORA</h2>
-        <article>
-            <section>
-                <h3>Nustras instalaciónes</h3>
-                <img class="presentacion" src="resources/gym_home1.jpg" alt="Interior del gymnasio">
+<body>
+<header>
+    <a href="index.html"><img id="logo" src="imagenes/header/logo.jpg" alt="La Roca LOGO"></a>
+    <nav>
+        <a href="planes.html">Planes</a>
+        <a href="entrenamientos.html">Entrenamiento</a>
+        <a href="mas_info.html">Más Info</a>
+    </nav>
+    <div class="redes-sociales">
+        <a href="https://www.whatsapp.com/"><img src="imagenes/header/what.png" alt="WhatsApp"></a>
+        <a href="https://www.facebook.com/"><img src="imagenes/header/facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/"><img src="imagenes/header/insta.png" alt="Instagram"></a>
+    </div>
+</header>
+
+<main>
+    <h2 class="leyenda1">TU VIAJE COMIENZA AHORA</h2>
+    <article>
+        <div class="recuadro">
+            <img class="imagen-recuadro" src="imagenes/index/gym_home1.jpg" alt="Interior del gymnasio">
+            <div>
+                <h2 class="titulo_recuadro">Nustras instalaciónes</h2>
                 <p>
                     Somos una cadena de gymnasios con mas de 20 años de experiencia, trabajando para que vos puedas mejorar
                     cada dia
                 </p>
-            </section>
-            <section>
-                <h3>Nustro equipo</h3>
-                <img class="presentacion" src="resources/entrenador_entrenando.jpg" alt="Equipo del gymnasio">
+            </div>
+        </div>
+
+        <div class="recuadro">
+            <div>
+                <h2 class="titulo_recuadro">Nustro equipo</h2>
                 <p>
                     Nuestro equipo de gente profesional te brindará todo su conocimiento y experiencia para que puedas
                     lograr todos tus objetivos
                 </p>
-            </section>
-            <section>
-                <h3>A tu manera</h3>
-                <img class="presentacion" src="resources/funcional.jpg" alt="Clase de funcional">
+            </div>
+            <img class="imagen-recuadro" src="imagenes/index/entrenador.png" alt="Equipo del gymnasio">
+        </div>
+
+        <div class="recuadro">
+            <img class="imagen-recuadro" src="imagenes/index/funcional2.jpg" alt="Clase de funcional">
+            <div>
+                <h2 class="titulo_recuadro">A tu manera</h2>
                 <p>
                     Disponemos de una amplia gama de actividades que podrás desarrollar, para que se adapten a tus
                     necesidades, entre ellas:
@@ -60,11 +64,12 @@
                     <li>Yoga</li>
                     <li>Kick boxing</li>
                 </ul>
-            </section>
-        </article>
-        <button>
-            COMENZÁ YA!
-        </button>
-    </main>
+            </div>
+        </div>
+    </article>
+    <div class="leyenda1 enlace">
+        <a href="mas_info.html">COMENZÁ YA!</a>
+    </div>
+</main>
 </body>
 </html>

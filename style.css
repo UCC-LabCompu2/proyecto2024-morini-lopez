@@ -1,0 +1,216 @@
+/* HEADER Y BODY */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /*color: dimgray;*/ /*TODO: ¿para que servía esto?*/
+    background-color: #333;
+}
+
+header, nav {
+    background-color: #000000;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*column-count: 3;*/
+}
+
+nav {
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-count: 3;
+    /*width: fit-content;*/
+    /*cursor: pointer;*/
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    padding: 0 20px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main{
+    margin: 150px;
+}
+
+h1, h2, h3 {
+    color: #fff;
+    text-align: center;
+}
+
+/*.container {*/
+/*    text-align: center;*/
+/*}*/
+
+.redes-sociales {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.redes-sociales img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+#logo{
+    width: 360px;
+    height: 200px;
+}
+
+
+
+/* INDEX */
+
+.leyenda1{
+    background-color: #555555;
+    margin: auto;
+    padding: 20px;
+    font-size: 2.5em;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.enlace:hover{
+    transition-duration: 500ms;
+    transform: scale(1.2);
+}
+
+.enlace a{
+    color: azure;
+}
+
+.recuadro{
+    background-color: #3f3f3f;
+    border-radius: 30px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    column-count: 2;
+    margin: 100px 75px;
+    font-size: 1.5em;
+}
+
+.recuadro div{
+    padding: 35px;
+    color: #cccccc;
+}
+
+.titulo_recuadro{
+/*TODO: poner alguna fuente de google fonts*/
+
+}
+
+.imagen-recuadro{
+    width: 720px;
+    height: 540px;
+    padding: 30px;
+}
+
+
+
+
+/* TUTORIALES EJERCICIOS */
+
+
+
+
+/* GRUPOS MUSCULARES */
+
+.grupo-muscular {
+    /*display: flex;*/
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /*padding: 20px;*/
+
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/*.grupo-muscular li {*/
+/*    margin-bottom: 20px;*/
+/*    padding: 10px;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+.grupo-muscular a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+
+.grupo-muscular a img {
+    width: 325px;
+    height: 225px;
+    border-radius: 30px;
+    padding: 15px;
+}
+
+.grupo-muscular a:hover {
+    transition-duration: 500ms;
+    transform: scale(1.15);
+}
+
+
+
+/* FORMULARIO */
+
+.cuadro {
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.cuadro ul li a {
+    color: white;
+}
+
+form{
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+form input[type="text"],
+form input[type="tel"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
