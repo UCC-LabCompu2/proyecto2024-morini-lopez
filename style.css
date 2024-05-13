@@ -17,6 +17,10 @@ header, nav {
     background-color: #000000;
 }
 
+header h1 {
+    padding-right: 20px;
+}
+
 header a {
     font-size: 1.5em;
 }
@@ -26,8 +30,6 @@ nav {
     border: 2px solid white;
     border-radius: 10px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     column-count: 3;
 }
 
@@ -53,14 +55,17 @@ h1, h2, h3 {
 .redes-sociales {
     display: flex;
     justify-content: flex-end;
-    margin-right: 20px;
+    margin-right: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .redes-sociales img {
     width: 50px;
     height: auto;
-    margin-right: 10px;
-    border-radius: 10px;
+    padding: 0 5px;
+    border-radius: 15px;
 }
 
 #logo{
