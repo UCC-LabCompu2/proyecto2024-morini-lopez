@@ -177,6 +177,8 @@ form{
     background-color: #fff;
     padding: 40px;
     border-radius: 10px;
+    font-size: 1.5em;
+    margin-top: 80px;
 }
 
 form label {
@@ -194,6 +196,11 @@ form textarea {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    font-size: 1.2em;
 }
 
 
