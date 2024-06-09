@@ -263,7 +263,7 @@ canvas {
     background-color: white;
 }
 
-form {
+.formularioMedidas {
     background-color: #fff;
     color: #000;
     padding: 20px;
@@ -272,9 +272,10 @@ form {
     margin-bottom: 20px;
 }
 
-form label, form input, form button {
+.formularioMedidas label, .formularioMedidas input, .formularioMedidas button {
     display: block;
     margin: 10px auto;
     width: 80%;
 }
+
 
