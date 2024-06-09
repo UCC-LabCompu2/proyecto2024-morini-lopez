@@ -87,6 +87,7 @@ h1, h2, h3 {
     align-items: center;
     border-radius: 20px;
     width: fit-content;
+    font-size: 1.8em;
 }
 
 .enlace:hover{
@@ -232,7 +233,7 @@ input[type="submit"] {
 
 
 
-/* proximamente.html */
+/* progreso.html */
 
 .fondo {
     background: url('imagenes/grua.jpg');
@@ -247,3 +248,25 @@ input[type="submit"] {
     text-align: center;
     margin: 0;
 }
+
+.contenedor-graficas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+/*.contenedor-grafica {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    margin: 20px;*/
+/*}*/
+canvas {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+
+

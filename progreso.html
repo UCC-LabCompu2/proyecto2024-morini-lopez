@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>En construcción | La roca GYM</title>
+    <title>Medí tu progreso | La roca GYM</title>
     <meta name="author" content="Lopez, Franco; Morini, Germán">
     <meta name="description" content="El mejor gymnasio de Córdoba">
     <meta name="keywords" content="Córdoba, salud, ejercicio, bienestar">
@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="funciones.js" type="text/javascript"></script>
 </head>
-<body>
 <header>
     <a href="index.html"><img id="logo" src="imagenes/header/logo.jpg" alt="La Roca LOGO"></a>
     <nav>
@@ -27,10 +27,39 @@
         <a href="https://www.instagram.com/"><img src="imagenes/header/insta.png" alt="Instagram"></a>
     </div>
 </header>
-<main class="fondo">
-    <div class="leyenda1">
-        <h1>¡¡PRÓXIMAMENTE!!</h1>
+<body>
+<div>
+    <h1 class="leyenda1">Comparador de Progreso</h1>
+    <form id="formularioProgreso">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" required>
+
+        <label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" required>
+
+        <label for="cintura">Medida de cintura (cm):</label>
+        <input type="number" id="cintura" required>
+
+        <label for="caderas">Medida de caderas (cm):</label>
+        <input type="number" id="caderas" required>
+
+        <button type="button" onclick="aniadirDatos()">Añadir Datos</button>
+    </form>
+</div>
+
+<div class="contenedor-graficas">
+    <div class="contenedor-grafica">
+        <h3 class="leyenda1">Peso (kg)</h3>
+        <canvas id="graficaPeso" width="300" height="300"></canvas>
     </div>
-</main>
+    <div class="contenedor-grafica">
+        <h3 class="leyenda1">Cintura (cm)</h3>
+        <canvas id="graficaCintura" width="300" height="300"></canvas>
+    </div>
+    <div class="contenedor-grafica">
+        <h3 class="leyenda1">Caderas (cm)</h3>
+        <canvas id="graficaCaderas" width="300" height="300"></canvas>
+    </div>
+</div>
 </body>
 </html>
