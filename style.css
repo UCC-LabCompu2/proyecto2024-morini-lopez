@@ -272,18 +272,10 @@ body.fondo_progreso {
     color: #333; 
 }
 
-.contenedor {
-    position: relative; 
-    width: 400px; 
-    height: 300px; 
-    background-color: #f0f0f0; 
-}
-
 .imagen {
-    position: absolute; 
-    top: 100px; 
-    left: 100px; 
+    position: absolute;  
+    left: 1050px; 
+    top: 40%;
 }
-
 
 
