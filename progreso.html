@@ -6,13 +6,8 @@
     <meta name="author" content="Lopez, Franco; Morini, Germán">
     <meta name="description" content="El mejor gymnasio de Córdoba">
     <meta name="keywords" content="Córdoba, salud, ejercicio, bienestar">
-    <link rel="shortcut icon" type="image/x-icon" href="imagenes/favicon.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <script src="funciones.js" type="text/javascript"></script>
 </head>
+<body>
 <header>
     <a href="index.html"><img id="logo" src="imagenes/header/logo.jpg" alt="La Roca LOGO"></a>
     <nav>
@@ -20,17 +15,10 @@
         <a href="entrenamientos.html">Entrenamiento</a>
         <a href="mas_info.html">Más Info</a>
     </nav>
-    <div class="redes-sociales">
-        <h1>Seguinos:</h1>
-        <a href="https://www.whatsapp.com/"><img src="imagenes/header/what.png" alt="WhatsApp"></a>
-        <a href="https://www.facebook.com/"><img src="imagenes/header/facebook.png" alt="Facebook"></a>
-        <a href="https://www.instagram.com/"><img src="imagenes/header/insta.png" alt="Instagram"></a>
-    </div>
 </header>
-<body>
-<div>
-    <h1 class="leyenda1">Comparador de Progreso</h1>
-    <form id="formularioProgreso">
+<main>
+    <h1>Comparador de Progreso</h1>
+    <form id="formularioProgreso" class="formularioMedidas">
         <label for="fecha">Fecha:</label>
         <input type="date" id="fecha" required>
 
@@ -45,21 +33,19 @@
 
         <button type="button" onclick="aniadirDatos()">Añadir Datos</button>
     </form>
-</div>
 
-<div class="contenedor-graficas">
-    <div class="contenedor-grafica">
-        <h3 class="leyenda1">Peso (kg)</h3>
-        <canvas id="graficaPeso" width="300" height="300"></canvas>
+    <div class="contenedor-graficas">
+        <div class="contenedor-grafica">
+            <h3>Peso (kg)</h3>
+            <canvas id="graficaPeso" width="300" height="300"></canvas>
+        </div>
+        <div class="contenedor-grafica">
+            <h3>Cintura (cm)</h3>
+            <canvas id="graficaCintura" width="300" height="300"></canvas>
+        </div>
+        <div class="contenedor-grafica">
+            <h3>Caderas (cm)</h3>
+            <canvas id="graficaCaderas" width="300" height="300"></canvas>
+        </div>
     </div>
-    <div class="contenedor-grafica">
-        <h3 class="leyenda1">Cintura (cm)</h3>
-        <canvas id="graficaCintura" width="300" height="300"></canvas>
-    </div>
-    <div class="contenedor-grafica">
-        <h3 class="leyenda1">Caderas (cm)</h3>
-        <canvas id="graficaCaderas" width="300" height="300"></canvas>
-    </div>
-</div>
-</body>
-</html>
+</main>
