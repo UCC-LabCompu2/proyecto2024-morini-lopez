@@ -263,6 +263,14 @@ canvas {
     background-color: white;
 }
 
+body.fondo_progreso {
+    background-image: url('imagenes/fondo_gimnasio.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center; 
+    color: #333; 
+}
 
 
 
