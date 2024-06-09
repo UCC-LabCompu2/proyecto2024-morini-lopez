@@ -140,3 +140,23 @@ let dibujarImagen = (idGrafica, valor, color, posicionX) => {
     canvas.setAttribute('data-ultima-y', y);
 }
 
+function calcularDiferenciaPeso() {
+    var pesoActual = document.getElementById("peso").value;
+    var diferencia = 0;
+    
+    if (pesoAnterior !== null) {
+        diferencia = pesoActual - pesoAnterior;
+        if (diferencia > 0) {
+            alert("Has ganado " + diferencia + " kg.");
+        } else if (diferencia < 0) {
+            alert("Has perdido " + (-diferencia) + " kg.");
+        } else {
+            alert("Tu peso se ha mantenido igual.");
+        }
+    } else {
+        alert("No hay un peso anterior registrado.");
+    }
+    pesoAnterior = pesoActual;
+}
+
+
