@@ -263,19 +263,6 @@ canvas {
     background-color: white;
 }
 
-.formularioMedidas {
-    background-color: #fff;
-    color: #000;
-    padding: 20px;
-    border-radius: 10px;
-    display: inline-block;
-    margin-bottom: 20px;
-}
 
-.formularioMedidas label, .formularioMedidas input, .formularioMedidas button {
-    display: block;
-    margin: 10px auto;
-    width: 80%;
-}
 
 
