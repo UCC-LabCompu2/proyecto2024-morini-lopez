@@ -257,16 +257,8 @@ input[type="submit"] {
     margin-bottom: 100px;
 }
 
-/*.contenedor-grafica {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    align-items: center;*/
-/*    margin: 20px;*/
-/*}*/
 canvas {
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: white;
 }
-
-

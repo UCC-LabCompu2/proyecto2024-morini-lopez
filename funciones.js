@@ -1,8 +1,8 @@
 var nombre, dni, edad, telefono, email
-var pesoX = 30; // Posición inicial en X para la gráfica de peso
-var cinturaX = 30;  // Posición inicial en X para la gráfica de cintura
-var caderasX = 30;   // Posición inicial en X para la gráfica de caderas
-var espacioX = 30; // Espacio entre puntos
+var pesoX = 30
+var cinturaX = 30
+var caderasX = 30
+var espacioX = 30
 
 /**
  * valida lo ingresado por el usuario en el formulario, si alguno de los campos contiene
@@ -74,71 +74,59 @@ let cargar_datos = () => {
 }
 
 /**
- *
+ * grafica los datos indicados por el usuario en el formulario de progreso
  */
 let aniadirDatos = () => {
     let fecha = document.getElementById('fecha').value;
     let peso = parseFloat(document.getElementById('peso').value);
     let cintura = parseFloat(document.getElementById('cintura').value);
     let caderas = parseFloat(document.getElementById('caderas').value);
-    if (fecha && peso > 0 && cintura > 0 && caderas > 0) {
-        // Verificar si la fecha ya ha sido ingresada usando un atributo data
-        if (localStorage.getItem(fecha)) {
-            alert('La fecha ya ha sido ingresada. Por favor, seleccione una fecha diferente.');
-        } else {
-            // Marcar esta fecha como usada estableciendo un atributo data
-            localStorage.setItem(fecha, true)
-
-            // Dibujar puntos y líneas
-            dibujarImagen('graficaPeso', peso, 'blue', pesoX);
-            dibujarImagen('graficaCintura', cintura, 'red', cinturaX);
-            dibujarImagen('graficaCaderas', caderas, 'green', caderasX);
-
-            // Incrementar las posiciones en X
-            pesoX += espacioX;
-            cinturaX += espacioX;
-            caderasX += espacioX;
-        }
-    } else {
-        alert('Por favor, ingrese valores válidos.');
+    if (!(fecha && peso > 0 && peso < 150 && cintura > 0 && cintura < 150 && caderas > 0 && caderas < 150)) {
+        alert('Por favor, ingrese valores válidos (positivos y menores que 150)');
+        return
     }
-}
+    if (localStorage.getItem(fecha)) {
+        alert('La fecha ya ha sido ingresada. Por favor, seleccione una fecha diferente.');
+        return
+    }
+    localStorage.setItem(fecha, true)
 
-let validar_campos_progreso = () => {
+    dibujarImagen('graficaPeso', peso, 'blue', pesoX);
+    dibujarImagen('graficaCintura', cintura, 'red', cinturaX);
+    dibujarImagen('graficaCaderas', caderas, 'green', caderasX);
 
+    pesoX += espacioX;
+    cinturaX += espacioX;
+    caderasX += espacioX;
 }
 
 /**
- * Dibuja las gráficas de progreso
- * @param idGrafica
- * @param valor
- * @param color
- * @param posicionX
+ * dibuja las gráficas de progreso
+ * @param idGrafica - ID del canvas
+ * @param valor - valor a graficar
+ * @param color - color del trazo
+ * @param posicionX - desplazamiento en X
  */
 let dibujarImagen = (idGrafica, valor, color, posicionX) => {
     let canvas = document.getElementById(idGrafica);
     let ctx = canvas.getContext('2d');
     let alturaMax = canvas.height;
-    let y = alturaMax - (valor * alturaMax / 100);
+    let y = alturaMax - (valor * alturaMax/ 150);
 
-    // Dibujar el punto
     ctx.beginPath();
     ctx.arc(posicionX, y, 5, 0, 2 * Math.PI);
     ctx.fillStyle = color;
     ctx.fill();
     ctx.stroke();
 
-    // Dibujar la etiqueta del valor encima del punto
     ctx.font = "12px Arial";
     ctx.fillStyle = "black";
     ctx.textAlign = "center";
     ctx.fillText(valor, posicionX, y - 10);
 
-    // Obtener las coordenadas del último punto almacenadas en el elemento canvas
     let ultimaX = parseFloat(canvas.getAttribute('data-ultima-x'));
     let ultimaY = parseFloat(canvas.getAttribute('data-ultima-y'));
 
-    // Si hay puntos anteriores, dibujar una línea conectando al último punto
     if (!isNaN(ultimaX) && !isNaN(ultimaY)) {
         ctx.beginPath();
         ctx.moveTo(ultimaX, ultimaY);
@@ -148,7 +136,6 @@ let dibujarImagen = (idGrafica, valor, color, posicionX) => {
         ctx.stroke();
     }
 
-    // Actualizar el elemento canvas con las nuevas coordenadas del último punto
     canvas.setAttribute('data-ultima-x', posicionX);
     canvas.setAttribute('data-ultima-y', y);
 }
