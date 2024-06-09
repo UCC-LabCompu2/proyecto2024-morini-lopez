@@ -139,3 +139,10 @@ let dibujarImagen = (idGrafica, valor, color, posicionX) => {
     canvas.setAttribute('data-ultima-x', posicionX);
     canvas.setAttribute('data-ultima-y', y);
 }
+
+function calcularIMC() {
+    var peso = document.getElementById("peso").value;
+    var altura = document.getElementById("altura").value;
+    var imc = peso / (altura * altura);
+    alert("Tu índice de masa corporal (IMC) es: " + imc.toFixed(2));
+}
