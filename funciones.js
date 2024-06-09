@@ -81,7 +81,15 @@ let aniadirDatos = () => {
     let peso = parseFloat(document.getElementById('peso').value);
     let cintura = parseFloat(document.getElementById('cintura').value);
     let caderas = parseFloat(document.getElementById('caderas').value);
-
+    if (peso < 120 ){
+        alert('La fecha ya ha sido ingresada. Por favor, seleccione una fecha diferente.');
+    }
+    if (cintura < 120 ){
+        alert('La fecha ya ha sido ingresada. Por favor, seleccione una fecha diferente.');
+    }
+    if (caderas < 120 ){
+        alert('La fecha ya ha sido ingresada. Por favor, seleccione una fecha diferente.');
+    }
     if (fecha && peso > 0 && cintura > 0 && caderas > 0) {
         // Verificar si la fecha ya ha sido ingresada usando un atributo data
         if (localStorage.getItem(fecha)) {
