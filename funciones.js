@@ -82,27 +82,16 @@ let aniadirDatos = () => {
     let peso = parseFloat(document.getElementById('peso').value);
     let cintura = parseFloat(document.getElementById('cintura').value);
     let caderas = parseFloat(document.getElementById('caderas').value);
-    
+
     if (!(fecha && peso > 0 && peso < 150 && cintura > 0 && cintura < 150 && caderas > 0 && caderas < 150)) {
         alert('Por favor, ingrese valores válidos (positivos y menores que 150)');
-        return
+        return;
     }
     if (localStorage.getItem(fecha)) {
         alert('La fecha ya ha sido ingresada. Por favor, seleccione una fecha diferente.');
-        return
-    }
-
-    var pesoActual = parseFloat(document.getElementById("peso").value);
-
-    if (isNaN(pesoActual)) {
-        alert("Por favor, ingresa un peso válido.");
         return;
     }
-
-    pesoAnterior = pesoActual; 
-    alert("Datos añadidos correctamente.");
-    
-    localStorage.setItem(fecha, true)
+    localStorage.setItem(fecha, true);
 
     dibujarImagen('graficaPeso', peso, 'blue', pesoX);
     dibujarImagen('graficaCintura', cintura, 'red', cinturaX);
@@ -111,16 +100,22 @@ let aniadirDatos = () => {
     pesoX += espacioX;
     cinturaX += espacioX;
     caderasX += espacioX;
+
+    calcularDiferenciaPeso(peso); // Llamamos a la función para calcular la diferencia de peso
 }
 
 /**
  * dibuja las gráficas de progreso
+ * @param idGrafica - ID del canvas
+ * @param valor - valor a graficar
+ * @param color - color del trazo
+ * @param posicionX - desplazamiento en X
  */
 let dibujarImagen = (idGrafica, valor, color, posicionX) => {
     let canvas = document.getElementById(idGrafica);
     let ctx = canvas.getContext('2d');
     let alturaMax = canvas.height;
-    let y = alturaMax - (valor * alturaMax/ 150);
+    let y = alturaMax - (valor * alturaMax / 150);
 
     ctx.beginPath();
     ctx.arc(posicionX, y, 5, 0, 2 * Math.PI);
@@ -149,9 +144,7 @@ let dibujarImagen = (idGrafica, valor, color, posicionX) => {
     canvas.setAttribute('data-ultima-y', y);
 }
 
-function calcularDiferenciaPeso() {
-    var pesoActual = parseFloat(document.getElementById("peso").value);
-
+function calcularDiferenciaPeso(pesoActual) {
     if (isNaN(pesoActual)) {
         alert("Por favor, ingresa un peso válido.");
         return;
@@ -169,7 +162,6 @@ function calcularDiferenciaPeso() {
     } else {
         alert("No hay un peso anterior registrado.");
     }
+    pesoAnterior = pesoActual; // Actualizamos el peso anterior
 }
-
-
 
