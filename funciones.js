@@ -142,7 +142,7 @@ let dibujarImagen = (idGrafica, valor, color, posicionX) => {
 }
 
 
-function aniadirDatos() {
+function aniadirDatospeso() {
     var pesoActual = parseFloat(document.getElementById("peso").value);
 
     if (isNaN(pesoActual)) {
