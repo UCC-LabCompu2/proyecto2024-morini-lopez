@@ -82,6 +82,7 @@ let aniadirDatos = () => {
     let peso = parseFloat(document.getElementById('peso').value);
     let cintura = parseFloat(document.getElementById('cintura').value);
     let caderas = parseFloat(document.getElementById('caderas').value);
+    
     if (!(fecha && peso > 0 && peso < 150 && cintura > 0 && cintura < 150 && caderas > 0 && caderas < 150)) {
         alert('Por favor, ingrese valores válidos (positivos y menores que 150)');
         return
@@ -90,6 +91,17 @@ let aniadirDatos = () => {
         alert('La fecha ya ha sido ingresada. Por favor, seleccione una fecha diferente.');
         return
     }
+
+    var pesoActual = parseFloat(document.getElementById("peso").value);
+
+    if (isNaN(pesoActual)) {
+        alert("Por favor, ingresa un peso válido.");
+        return;
+    }
+
+    pesoAnterior = pesoActual; 
+    alert("Datos añadidos correctamente.");
+    
     localStorage.setItem(fecha, true)
 
     dibujarImagen('graficaPeso', peso, 'blue', pesoX);
@@ -135,19 +147,6 @@ let dibujarImagen = (idGrafica, valor, color, posicionX) => {
 
     canvas.setAttribute('data-ultima-x', posicionX);
     canvas.setAttribute('data-ultima-y', y);
-}
-
-
-function aniadirDatospeso() {
-    var pesoActual = parseFloat(document.getElementById("peso").value);
-
-    if (isNaN(pesoActual)) {
-        alert("Por favor, ingresa un peso válido.");
-        return;
-    }
-
-    pesoAnterior = pesoActual; 
-    alert("Datos añadidos correctamente.");
 }
 
 function calcularDiferenciaPeso() {
