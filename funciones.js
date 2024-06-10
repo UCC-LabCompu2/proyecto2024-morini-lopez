@@ -167,7 +167,7 @@ function calcularDiferenciaPeso() {
         if (diferencia > 0) {
             alert("Has ganado " + diferencia + " kg.");
         } else if (diferencia < 0) {
-            alert("Has perdido " + Math.abs(diferencia) + " kg.");
+            alert("Has perdido " + (-diferencia) + " kg.");
         } else {
             alert("Tu peso se ha mantenido igual.");
         }
