@@ -3,6 +3,7 @@ var pesoX = 30
 var cinturaX = 30
 var caderasX = 30
 var espacioX = 30
+var pesoAnterior = null; 
 
 /**
  * valida lo ingresado por el usuario en el formulario, si alguno de los campos contiene
@@ -140,23 +141,40 @@ let dibujarImagen = (idGrafica, valor, color, posicionX) => {
     canvas.setAttribute('data-ultima-y', y);
 }
 
+
+function aniadirDatos() {
+    var pesoActual = parseFloat(document.getElementById("peso").value);
+
+    if (isNaN(pesoActual)) {
+        alert("Por favor, ingresa un peso válido.");
+        return;
+    }
+
+    pesoAnterior = pesoActual; 
+    alert("Datos añadidos correctamente.");
+}
+
 function calcularDiferenciaPeso() {
-    var pesoActual = document.getElementById("peso").value;
-    var diferencia = 0;
-    
+    var pesoActual = parseFloat(document.getElementById("peso").value);
+
+    if (isNaN(pesoActual)) {
+        alert("Por favor, ingresa un peso válido.");
+        return;
+    }
+
     if (pesoAnterior !== null) {
-        diferencia = pesoActual - pesoAnterior;
+        var diferencia = pesoActual - pesoAnterior;
         if (diferencia > 0) {
             alert("Has ganado " + diferencia + " kg.");
         } else if (diferencia < 0) {
-            alert("Has perdido " + (-diferencia) + " kg.");
+            alert("Has perdido " + Math.abs(diferencia) + " kg.");
         } else {
             alert("Tu peso se ha mantenido igual.");
         }
     } else {
         alert("No hay un peso anterior registrado.");
     }
-    pesoAnterior = pesoActual;
 }
+
 
 
