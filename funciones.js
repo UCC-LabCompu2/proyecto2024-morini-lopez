@@ -103,10 +103,6 @@ let aniadirDatos = () => {
 
 /**
  * dibuja las gráficas de progreso
- * @param idGrafica - ID del canvas
- * @param valor - valor a graficar
- * @param color - color del trazo
- * @param posicionX - desplazamiento en X
  */
 let dibujarImagen = (idGrafica, valor, color, posicionX) => {
     let canvas = document.getElementById(idGrafica);
