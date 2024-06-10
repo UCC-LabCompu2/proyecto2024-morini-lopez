@@ -54,7 +54,6 @@ h1, h2, h3 {
 
 .redes-sociales {
     display: flex;
-    justify-content: flex-end;
     margin-right: 30px;
     align-items: center;
     justify-content: center;
@@ -81,7 +80,6 @@ h1, h2, h3 {
     background-color: #555555;
     margin: auto;
     padding: 20px;
-    font-size: 2.5em;
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -161,21 +159,6 @@ h1, h2, h3 {
 
 
 /* FORMULARIO */
-
-.cuadro {
-    padding: 10px 20px;
-    border: 2px solid white;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: fit-content;
-    cursor: pointer;
-}
-
-.cuadro ul li a {
-    color: white;
-}
 
 form{
     max-width: 600px;
@@ -262,20 +245,3 @@ canvas {
     border-radius: 5px;
     background-color: white;
 }
-
-body.fondo_progreso {
-    background-image: url('imagenes/fondo_gimnasio.jpg'); 
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-attachment: fixed; 
-    background-position: center; 
-    color: #333; 
-}
-
-.imagen {
-    position: absolute;  
-    left: 940px; 
-    top: 39%;
-}
-
-

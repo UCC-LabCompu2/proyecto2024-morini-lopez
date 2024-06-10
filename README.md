@@ -24,7 +24,7 @@ el progreso en tu entrenamiento
 
 ### Autores
 
-| Apellido y nombre | Clave |
-|-------------------|-------|
+| Apellido y nombre | Clave   |
+|-------------------|---------|
 | Lopez, Franco     | 2306164 |
 | Morini, Germán    | 2302130 |

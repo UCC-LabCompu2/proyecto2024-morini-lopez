@@ -28,44 +28,39 @@
         <a href="https://www.instagram.com/"><img src="imagenes/header/insta.png" alt="Instagram"></a>
     </div>
 </header>
-<div>
-    <h1 class="leyenda1">Comparador de Progreso</h1>
-    <form id="formularioProgreso">
-        <label for="fecha">Fecha:</label>
-        <input type="date" id="fecha" required>
+    <main class="fondo_progreso">
+        <h1 class="leyenda1">Comparador de Progreso</h1>
+        <form id="formularioProgreso">
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" required>
 
-        <label for="peso">Peso (kg):</label>
-        <input type="number" id="peso" required>
+            <label for="peso">Peso (kg):</label>
+            <input type="number" id="peso" required>
 
-        <label for="cintura">Medida de cintura (cm):</label>
-        <input type="number" id="cintura" required>
+            <label for="cintura">Medida de cintura (cm):</label>
+            <input type="number" id="cintura" required>
 
-        <label for="caderas">Medida de caderas (cm):</label>
-        <input type="number" id="caderas" required>
+            <label for="caderas">Medida de caderas (cm):</label>
+            <input type="number" id="caderas" required>
 
-        <button type="button" onclick="aniadirDatos()">Añadir Datos</button>
-        <button type="button" onclick="calcularDiferenciaPeso()">Finalizar</button>
-    </form>
-</div>
-<div>
-    <img class="imagen" src="https://img.remediosdigitales.com/66a307/un-indice-de-progreso-socioeconomico-se-correla-con-la-economia-y...-no-es-pib-todo-lo-que-reluce---3/450_1000.jpg" width="300" height="300" alt="Imagen">
-</div>
-<div class="contenedor-graficas">
-    <div class="contenedor-grafica">
-        <h3 class="leyenda1">Peso (kg)</h3>
-        <canvas id="graficaPeso" width="300" height="300"></canvas>
+            <button type="button" onclick="aniadirDatos()">Añadir Datos</button>
+        </form>
+    <div class="contenedor-graficas">
+        <div class="contenedor-graficas">
+            <div class="contenedor-grafica">
+                <h3 class="leyenda1">Peso (kg)</h3>
+                <canvas id="graficaPeso" width="300" height="300"></canvas>
+            </div>
+            <div class="contenedor-grafica">
+                <h3 class="leyenda1">Cintura (cm)</h3>
+                <canvas id="graficaCintura" width="300" height="300"></canvas>
+            </div>
+            <div class="contenedor-grafica">
+                <h3 class="leyenda1">Caderas (cm)</h3>
+                <canvas id="graficaCaderas" width="300" height="300"></canvas>
+            </div>
+        </div>
     </div>
-    <div class="contenedor-grafica">
-        <h3 class="leyenda1">Cintura (cm)</h3>
-        <canvas id="graficaCintura" width="300" height="300"></canvas>
-    </div>
-    <div class="contenedor-grafica">
-        <h3 class="leyenda1">Caderas (cm)</h3>
-        <canvas id="graficaCaderas" width="300" height="300"></canvas>
-    </div>
-</div>
+</main>
 </body>
 </html>
-
-
-
