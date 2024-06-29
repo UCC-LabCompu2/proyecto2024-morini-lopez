@@ -192,6 +192,22 @@ input[type="submit"] {
     font-size: 1.2em;
 }
 
+#formularioProgreso input[type="date"],
+#formularioProgreso input[type="number"] {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 20px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#formularioProgreso button {
+    font-size: 1.2em;
+    padding: 10px 20px; 
+    background-color: #333; 
+    color: white;
+    border-radius: 10px;
+}
 
 
 /* mensaje.html */
