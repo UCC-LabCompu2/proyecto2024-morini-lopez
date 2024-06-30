@@ -236,7 +236,7 @@ let cargar_imagen = () => {
     const ctx = canvas.getContext("2d");
 
     const img = new Image();
-    img.src = "/imagenes/animaciones/animacion1_"+animacion_n+".jpg";
+    img.src = "imagenes/animaciones/animacion1_"+animacion_n+".jpg";
     img.onload = function () {
         canvas.width = canvas.width;
         ctx.drawImage(img, 0, 0);
