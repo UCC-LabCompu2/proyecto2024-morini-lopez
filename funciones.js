@@ -1,8 +1,9 @@
 var pesoX = 30;
 var cinturaX = 30;
 var caderasX = 30;
-var espacioX = 30;
+const espacioX = 30;
 var pesoAnterior = null;
+var animacion_n = 1;
 
 /**
  * valída lo ingresado por el usuario en el formulario, si alguno de los campos contiene
@@ -69,6 +70,7 @@ let enviar_formulario = () => {
 
 /**
  * carga los datos que ingresó el usuario para mostrar el mensaje
+ * activa la animación el canvas
  * @method cargar_datos
  */
 let cargar_datos = () => {
@@ -77,6 +79,8 @@ let cargar_datos = () => {
 
     document.getElementById("agradecimiento").children.item(0).textContent = `¡Muchas gracias por tu mensaje ${nom}!`;
     document.getElementById("agradecimiento").children.item(1).textContent = `Pronto recibirás una respuesta en ${em}!`;
+
+    animar_canvas()
 }
 
 /**
@@ -92,7 +96,7 @@ let aniadirDatos = () => {
     const peso = parseFloat(document.getElementById('peso').value);
     const cintura = parseFloat(document.getElementById('cintura').value);
     const caderas = parseFloat(document.getElementById('caderas').value);
-        
+
     localStorage.setItem(fecha, true);
 
     dibujarImagen('graficaPeso', peso, 'blue', pesoX);
@@ -159,7 +163,7 @@ let validar_campos_progreso = () => {
 let dibujarImagen = (idGrafica, valor, color, posicionX) => {
     let canvas = document.getElementById(idGrafica);
     let ctx = canvas.getContext('2d');
-    let alturaMax = canvas.height;
+    const alturaMax = canvas.height;
     let y = alturaMax - (valor * alturaMax/ 150);
 
     ctx.beginPath();
@@ -213,4 +217,34 @@ let calcularDiferenciaPeso = (pesoActual) => {
         alert("No hay un peso anterior registrado.");
     }
     pesoAnterior = pesoActual;
+}
+
+/**
+ * anima el canvas usando la animación 1, alternando entre dos imagenes
+ * @method animar_canvas
+ */
+let animar_canvas = () => {
+    setInterval(cargar_imagen, 800);
+}
+
+/**
+ * carga la imagen necesaria para realizar la animación
+ * @method cargar_imagen
+ */
+let cargar_imagen = () => {
+    const canvas = document.getElementById("animacion");
+    const ctx = canvas.getContext("2d");
+
+    const img = new Image();
+    img.src = "/imagenes/animaciones/animacion1_"+animacion_n+".jpg";
+    img.onload = function () {
+        canvas.width = canvas.width;
+        ctx.drawImage(img, 0, 0);
+    }
+
+    if (animacion_n === 1) {
+        animacion_n = 2;
+    } else {
+        animacion_n = 1;
+    }
 }
