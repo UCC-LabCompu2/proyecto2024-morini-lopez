@@ -9,7 +9,7 @@ var animacion_n = 1;
  * valída lo ingresado por el usuario en el formulario, si alguno de los campos contiene
  * un formato erróneo elimina su contenido
  * @method validar_campos_mas_info
- * @returns {boolean} true si no hay errores en lo ingresado, sino false
+ * @returns {boolean} - true si hay errores en lo ingresado, sino false
  */
 let validar_campos_mas_info = () => {
     let error = false;
@@ -41,7 +41,7 @@ let validar_campos_mas_info = () => {
         telefono.value = "";
         error = true;
     }
-    // Revisa que contanga al menos un asterisco y un punto
+    // Revisa que contanga al menos un arroba y un punto
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value) || email.value.length == 0) {
         alert("El email no debe contener espacios, y debe tener @ y .");
         email.value = "";
@@ -114,7 +114,7 @@ let aniadirDatos = () => {
  * indica al usuario si hubo un error en los valores ingresados
  * elimina el contenido de los campos con valores incorrectos
  * @method validar_campos_progreso
- * @returns {boolean} - true si los campos son correctos, false si hubo algún error
+ * @returns {boolean} - true si hay errores en lo ingresado, sino false
  */
 let validar_campos_progreso = () => {
     let error = false;
